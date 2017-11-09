@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Couch to 5K</string>
+
+    <string name="week_format">Week %1$d</string>
+    <string name="run_format">Run %1$d</string>
+    <string name="run_title_format">Week %1$d, Run %2$d</string>
+    <string name="finished">FINISHED!</string>
+
+    <string name="start_label">Start</string>
+    <string name="finish_label">Finish</string>
+    <string name="done_label">Done</string>
+
+    <string name="activity_run">Run!</string>
+    <string name="activity_walk">Walk!</string>
+
+</resources>

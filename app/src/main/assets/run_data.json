@@ -1,0 +1,440 @@
+[
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 60
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 120
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 120
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 120
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 120
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 120
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 120
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 180
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          },
+          {
+            "type": "run",
+            "duration": 90
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 180
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 180
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 300
+          },
+          {
+            "type": "walk",
+            "duration": 150
+          },
+          {
+            "type": "run",
+            "duration": 180
+          },
+          {
+            "type": "walk",
+            "duration": 90
+          },
+          {
+            "type": "run",
+            "duration": 300
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 300
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          },
+          {
+            "type": "run",
+            "duration": 300
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          },
+          {
+            "type": "run",
+            "duration": 300
+          }
+        ]
+      },
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 480
+          },
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 480
+          }
+        ]
+      },
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 1200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 300
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          },
+          {
+            "type": "run",
+            "duration": 480
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          },
+          {
+            "type": "run",
+            "duration": 300
+          }
+        ]
+      },
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 600
+          },
+          {
+            "type": "walk",
+            "duration": 180
+          },
+          {
+            "type": "run",
+            "duration": 600
+          }
+        ]
+      },
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 1500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 1500
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 1680
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  },
+  {
+    "runs": [
+      {
+        "steps": [
+          {
+            "type": "walk",
+            "duration": 300
+          },
+          {
+            "type": "run",
+            "duration": 1800
+          }
+        ]
+      },
+      {
+        "copyOf": 0
+      },
+      {
+        "copyOf": 0
+      }
+    ]
+  }
+]
