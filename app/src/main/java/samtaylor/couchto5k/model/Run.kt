@@ -2,7 +2,7 @@ package samtaylor.couchto5k.model
 
 import java.util.*
 
-data class Run(val steps: Array<Step>?, val copyOf: Int?) {
+data class Run(val steps: Array<Step>?, val copyOf: Int?, val description: String?) {
 
     override fun equals(other: Any?): Boolean {
 

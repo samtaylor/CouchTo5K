@@ -2,6 +2,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then alternate one minute of running and one-and-a-half minutes of walking, for a total of 20 minutes.",
         "steps": [
           {
             "type": "walk",
@@ -84,6 +85,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then alternate one-and-a-half minutes of running with two minutes of walking, for a total of 20 minutes.",
         "steps": [
           {
             "type": "walk",
@@ -150,6 +152,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then two repetitions of one-and-a-half minutes of running, one-and-a-half minutes of walking, three minutes of running and three minutes of walking.",
         "steps": [
           {
             "type": "walk",
@@ -200,6 +203,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then three minutes of running, one-and-a-half minutes of walking, five minutes of running, two-and-a-half minutes of walking, three minutes of running, one-and-a-half minutes of walking and five minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -246,6 +250,7 @@
   {
     "runs": [
       {
+        "description": "A brisk five-minute walk, then five minutes of running, three minutes of walking, five minutes of running, three minutes of walking and five minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -274,6 +279,7 @@
         ]
       },
       {
+        "description": "A brisk five-minute walk, then eight minutes of running, five minutes of walking and eight minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -294,6 +300,7 @@
         ]
       },
       {
+        "description": "A brisk five-minute walk, then 20 minutes of running, with no walking.",
         "steps": [
           {
             "type": "walk",
@@ -310,6 +317,7 @@
   {
     "runs": [
       {
+        "description": "A brisk five-minute walk, then five minutes of running, three minutes of walking, eight minutes of running, three minutes of walking and five minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -338,6 +346,7 @@
         ]
       },
       {
+        "description": "A brisk five-minute walk, then 10 minutes of running, three minutes of walking and 10 minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -358,6 +367,7 @@
         ]
       },
       {
+        "description": "A brisk five-minute walk, then 25 minutes of running with no walking.",
         "steps": [
           {
             "type": "walk",
@@ -374,6 +384,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then 25 minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -396,6 +407,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then 28 minutes of running.",
         "steps": [
           {
             "type": "walk",
@@ -418,6 +430,7 @@
   {
     "runs": [
       {
+        "description": "Begin with a brisk five-minute walk, then 30 minutes of running.",
         "steps": [
           {
             "type": "walk",

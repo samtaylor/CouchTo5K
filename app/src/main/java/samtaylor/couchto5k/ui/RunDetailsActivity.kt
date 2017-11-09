@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import kotlinx.android.synthetic.main.activity_run_details.*
 import samtaylor.couchto5k.R
+import samtaylor.couchto5k.data.DataProvider
 
 class RunDetailsActivity : WearableActivity() {
 
@@ -22,6 +23,14 @@ class RunDetailsActivity : WearableActivity() {
         val runNumber = intent.extras[EXTRA_RUN_NUMBER] as Int
 
         runTitle.text = getString(R.string.run_title_format, weekNumber + 1, runNumber + 1)
+
+        val week = DataProvider(this).data[weekNumber]
+        var run = week.runs[runNumber]
+        if (run.copyOf != null) {
+
+            run = week.runs[run.copyOf as Int]
+        }
+        description.text = run.description
 
         startButton.setOnClickListener {
 

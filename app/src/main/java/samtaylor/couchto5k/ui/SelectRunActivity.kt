@@ -7,6 +7,7 @@ import android.support.wearable.activity.WearableActivity
 import kotlinx.android.synthetic.main.activity_list.*
 import samtaylor.couchto5k.DataAdapter
 import samtaylor.couchto5k.R
+import samtaylor.couchto5k.data.DataProvider
 
 class SelectRunActivity : WearableActivity() {
 
@@ -20,13 +21,13 @@ class SelectRunActivity : WearableActivity() {
 
         super.onResume()
 
-        val data = Array(3) { getString(R.string.run_format, it + 1) }
+        val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
+        val data = Array(DataProvider(this).data[weekNumber].runs.size) { getString(R.string.run_format, it + 1) }
 
         recyclerView.layoutManager = WearableLinearLayoutManager(this)
         recyclerView.isEdgeItemsCenteringEnabled = resources.configuration.isScreenRound
         recyclerView.adapter = DataAdapter(data) {
 
-            val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
             val intent = Intent(this, RunDetailsActivity::class.java)
             intent.putExtra(RunDetailsActivity.EXTRA_WEEK_NUMBER, weekNumber)
             intent.putExtra(RunDetailsActivity.EXTRA_RUN_NUMBER, it)
