@@ -23,6 +23,12 @@ class RunActivity : WearableActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_run)
         setAmbientEnabled()
+
+        finishButton.setOnClickListener {
+
+            val intent = Intent(this, ContinueActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {

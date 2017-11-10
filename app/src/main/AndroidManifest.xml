@@ -44,6 +44,10 @@
 
         <activity android:name=".ui.FinishedActivity" />
 
+        <activity
+            android:name=".ui.ContinueActivity"
+            android:noHistory="true"/>
+
     </application>
 
 </manifest>

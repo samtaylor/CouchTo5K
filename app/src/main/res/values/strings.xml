@@ -15,4 +15,6 @@
     <string name="activity_run">Run!</string>
     <string name="activity_walk">Walk!</string>
 
+    <string name="continue_label">Continue?</string>
+
 </resources>

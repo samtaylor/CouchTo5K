@@ -54,9 +54,10 @@
 
 
     </android.support.wear.widget.BoxInsetLayout>
-    <Button
+
+    <ImageButton
         android:id="@+id/startButton"
-        android:text="@string/start_label"
+        android:src="@drawable/ic_run"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
