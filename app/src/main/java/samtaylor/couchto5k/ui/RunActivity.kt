@@ -18,6 +18,9 @@ class RunActivity : WearableActivity() {
 
     private var timer: Timer? = null
 
+    private var weekNumber = -1
+    private var runNumber = -1
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -26,8 +29,17 @@ class RunActivity : WearableActivity() {
 
         finishButton.setOnClickListener {
 
+            timer?.stop()
+
             val intent = Intent(this, ContinueActivity::class.java)
+            intent.putExtra(ContinueActivity.EXTRA_CURRENT_STEP, timer?.currentStep)
+            intent.putExtra(ContinueActivity.EXTRA_CURRENT_STEP_TIME, timer?.currentStepTime)
+            intent.putExtra(ContinueActivity.EXTRA_TOTAL_TIME, timer?.totalTime)
+            intent.putExtra(EXTRA_WEEK_NUMBER, weekNumber)
+            intent.putExtra(EXTRA_RUN_NUMBER, runNumber)
             startActivity(intent)
+
+            finish()
         }
     }
 
@@ -42,8 +54,8 @@ class RunActivity : WearableActivity() {
             vibrator.vibrate(vibrationPattern, -1)
         }
 
-        val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
-        val runNumber = intent.extras[EXTRA_RUN_NUMBER] as Int
+        weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
+        runNumber = intent.extras[EXTRA_RUN_NUMBER] as Int
 
         val week = DataProvider(this).data[weekNumber]
         var run = week.runs[runNumber]
@@ -52,7 +64,11 @@ class RunActivity : WearableActivity() {
             run = week.runs[run.copyOf as Int]
         }
 
-        timer = Timer(run.steps!!, progress, activity, intervalTime, totalTime, getString(R.string.activity_walk), getString(R.string.activity_run), buzz) {
+        val currentStep = intent.getIntExtra(ContinueActivity.EXTRA_CURRENT_STEP, 0)
+        val currentStepTime = intent.getIntExtra(ContinueActivity.EXTRA_CURRENT_STEP_TIME, 0)
+        val totalTimeValue = intent.getIntExtra(ContinueActivity.EXTRA_TOTAL_TIME, 0)
+
+        timer = Timer(run.steps!!, progress, activity, intervalTime, totalTime, getString(R.string.activity_walk), getString(R.string.activity_run), buzz, currentStep, currentStepTime, totalTimeValue) {
 
             val intent = Intent(this, FinishedActivity::class.java)
             intent.putExtra(FinishedActivity.EXTRA_WEEK_NUMBER, weekNumber)
@@ -84,19 +100,21 @@ class RunActivity : WearableActivity() {
                         private val walk: String,
                         private val run: String,
                         private val buzz: () -> Unit,
+                        var currentStep: Int,
+                        var currentStepTime: Int,
+                        var totalTime: Int,
                         private val onFinish: () -> Unit) {
-
-        private var currentStep = 0
-        private var totalTime = 0
-        private var currentStepTime = 0
 
         private val handler = Handler()
 
         init {
 
-            steps.forEach {
+            if (totalTime == 0) {
 
-                totalTime += it.duration
+                steps.forEach {
+
+                    totalTime += it.duration
+                }
             }
         }
 
@@ -107,7 +125,7 @@ class RunActivity : WearableActivity() {
                 totalTime --
                 if (currentStepTime - 1 == 0) {
 
-                    currentStep ++
+                    currentStep++
                     if (currentStep >= steps.size) {
 
                         buzz()
@@ -129,7 +147,7 @@ class RunActivity : WearableActivity() {
                 }
                 else {
 
-                    currentStepTime --
+                    currentStepTime--
 
                     progress.progress = currentStepTime
 
@@ -141,10 +159,12 @@ class RunActivity : WearableActivity() {
 
         fun start() {
 
-            currentStep = 0
-            currentStepTime = steps[currentStep].duration
+            if (currentStepTime == 0) {
 
-            progress.max = currentStepTime
+                currentStepTime = steps[currentStep].duration
+            }
+
+            progress.max = steps[currentStep].duration
             progress.progress = currentStepTime
 
             formatLabels()
