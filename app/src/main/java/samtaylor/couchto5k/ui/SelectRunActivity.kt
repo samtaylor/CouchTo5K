@@ -15,11 +15,6 @@ class SelectRunActivity : WearableActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
-    }
-
-    override fun onResume() {
-
-        super.onResume()
 
         val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
         val data = Array(DataProvider(this).data[weekNumber].runs.size) { getString(R.string.run_format, it + 1) }

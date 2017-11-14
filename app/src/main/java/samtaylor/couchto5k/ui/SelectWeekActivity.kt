@@ -15,11 +15,6 @@ class SelectWeekActivity : WearableActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
-    }
-
-    override fun onResume() {
-
-        super.onResume()
 
         val data = Array(DataProvider(this).data.size) { getString(R.string.week_format, it + 1) }
 
