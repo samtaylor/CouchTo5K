@@ -17,6 +17,9 @@ class SelectWeekActivity : WearableActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
+
+        navigationDrawer.controller.peekDrawer()
+        navigationDrawer.setAdapter(NavigationDrawerAdapter(getString(R.string.action_reset_all), getDrawable(R.drawable.ic_delete)))
     }
 
     override fun onResume() {
@@ -35,4 +38,5 @@ class SelectWeekActivity : WearableActivity() {
             startActivity(intent)
         }
     }
+
 }

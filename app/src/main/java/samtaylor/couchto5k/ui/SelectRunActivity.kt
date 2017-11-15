@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.support.wear.widget.WearableLinearLayoutManager
 import android.support.wearable.activity.WearableActivity
 import kotlinx.android.synthetic.main.activity_list.*
-import samtaylor.couchto5k.model.ListItem
-import samtaylor.couchto5k.model.ListItemAdapter
 import samtaylor.couchto5k.R
 import samtaylor.couchto5k.data.DataProvider
 import samtaylor.couchto5k.data.Persistence
+import samtaylor.couchto5k.model.ListItem
+import samtaylor.couchto5k.model.ListItemAdapter
 
 class SelectRunActivity : WearableActivity() {
 
@@ -17,6 +17,9 @@ class SelectRunActivity : WearableActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
+
+        navigationDrawer.controller.peekDrawer()
+        navigationDrawer.setAdapter(NavigationDrawerAdapter(getString(R.string.action_reset_week), getDrawable(R.drawable.ic_delete)))
     }
 
     override fun onResume() {
