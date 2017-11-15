@@ -16,5 +16,6 @@
     <string name="activity_walk">Walk!</string>
 
     <string name="continue_label">Continue?</string>
+    <string name="finish_warning">If you finish now, your progress for this run will be lost.</string>
 
 </resources>

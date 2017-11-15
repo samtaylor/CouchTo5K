@@ -5,10 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_grey"
     android:padding="@dimen/box_inset_layout_padding"
     tools:context="samtaylor.couchto5k.ui.RunActivity"
-    tools:deviceIds="wear">
+    tools:deviceIds="wear"
+    android:background="@color/primary">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,6 +23,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
+            android:textColor="@color/primary_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -34,6 +35,7 @@
             tools:text="00:00"
             android:gravity="center"
             android:textSize="20sp"
+            android:textColor="@color/primary_text"
             app:layout_constraintStart_toStartOf="@id/progress"
             app:layout_constraintEnd_toEndOf="@id/progress"
             app:layout_constraintTop_toTopOf="@id/progress"
@@ -46,6 +48,7 @@
             tools:text="00:00"
             android:textSize="10dp"
             android:gravity="center"
+            android:textColor="@color/primary_text"
             app:layout_constraintStart_toStartOf="@id/intervalTime"
             app:layout_constraintEnd_toEndOf="@id/intervalTime"
             app:layout_constraintTop_toBottomOf="@id/intervalTime"
@@ -61,6 +64,8 @@
             android:layout_marginTop="8dp"
             app:donut_text_size="0dp"
             app:donut_progress="75"
+            app:donut_finished_color="@color/accent"
+            app:donut_unfinished_color="@color/primary_dark"
             app:donut_finished_stroke_width="5dp"
             app:donut_unfinished_stroke_width="5dp"
             app:layout_constraintDimensionRatio="1:1"
@@ -75,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:src="@drawable/ic_pause"
+            android:backgroundTint="@color/primary_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>

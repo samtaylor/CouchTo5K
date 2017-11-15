@@ -5,9 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_grey"
     tools:context="samtaylor.couchto5k.ui.RunDetailsActivity"
-    tools:deviceIds="wear">
+    tools:deviceIds="wear"
+    android:background="@color/primary">
 
     <android.support.wear.widget.BoxInsetLayout
         android:layout_width="0dp"
@@ -30,7 +30,8 @@
                 android:gravity="center_horizontal"
                 tools:text="Week 3, Run 2"
                 android:textStyle="bold"
-                android:paddingBottom="8dp"
+                android:textColor="@color/primary_text"
+                android:paddingBottom="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -41,12 +42,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/runTitle"
+                android:padding="4dp"
                 app:layout_constraintBottom_toBottomOf="parent">
 
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"
                     tools:text="Begin with a brisk five-minute walk, then three minutes of running, one-and-a-half minutes of walking, five minutes of running, two-and-a-half minutes of walking, three minutes of running, one-and-a-half minutes of walking and five minutes of running."/>
             </ScrollView>
 
@@ -60,6 +63,7 @@
         android:src="@drawable/ic_run"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

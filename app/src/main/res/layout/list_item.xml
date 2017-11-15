@@ -11,13 +11,14 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_cancel_circle"
+        android:src="@drawable/ic_check_circle"
         android:paddingRight="8dp"/>
 
     <TextView
         android:id="@+id/label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
         tools:text="Week 1"/>
 
 </LinearLayout>

@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_grey"
     android:padding="@dimen/box_inset_layout_padding"
-    tools:deviceIds="wear">
+    tools:deviceIds="wear"
+    android:background="@color/primary">
 
     <android.support.wear.widget.WearableRecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:listitem="@layout/list_item"
         android:scrollbars="vertical"/>
 
 </android.support.wear.widget.BoxInsetLayout>
