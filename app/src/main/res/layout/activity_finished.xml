@@ -26,14 +26,14 @@
         android:gravity="center"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/secondary_text"
         android:text="@string/finished"/>
 
     <Button
         android:id="@+id/doneButton"
         android:text="@string/done_label"
         android:layout_width="match_parent"
-        android:backgroundTint="@color/primary_dark"
+        android:backgroundTint="@color/primary_light"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"/>
 

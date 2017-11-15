@@ -49,7 +49,7 @@
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/secondary_text"
                     tools:text="Begin with a brisk five-minute walk, then three minutes of running, one-and-a-half minutes of walking, five minutes of running, two-and-a-half minutes of walking, three minutes of running, one-and-a-half minutes of walking and five minutes of running."/>
             </ScrollView>
 
@@ -63,7 +63,7 @@
         android:src="@drawable/ic_run"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/primary_dark"
+        android:backgroundTint="@color/primary_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

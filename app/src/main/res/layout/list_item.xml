@@ -18,7 +18,7 @@
         android:id="@+id/label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/secondary_text"
         tools:text="Week 1"/>
 
 </LinearLayout>

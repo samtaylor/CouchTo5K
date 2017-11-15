@@ -28,31 +28,43 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/intervalTime"
-            android:layout_width="0dp"
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="00:00"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="@color/primary_text"
-            app:layout_constraintStart_toStartOf="@id/progress"
-            app:layout_constraintEnd_toEndOf="@id/progress"
-            app:layout_constraintTop_toTopOf="@id/progress"
-            app:layout_constraintBottom_toBottomOf="@id/progress"/>
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
 
-        <TextView
-            android:id="@+id/totalTime"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="00:00"
-            android:textSize="10dp"
+            android:orientation="vertical"
             android:gravity="center"
-            android:textColor="@color/primary_text"
-            app:layout_constraintStart_toStartOf="@id/intervalTime"
-            app:layout_constraintEnd_toEndOf="@id/intervalTime"
-            app:layout_constraintTop_toBottomOf="@id/intervalTime"
-            app:layout_constraintBottom_toBottomOf="@id/intervalTime"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/intervalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="00:00"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/secondary_text"/>
+
+            <TextView
+                android:id="@+id/totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="00:00"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/primary_text"/>
+
+        </LinearLayout>
+
 
         <com.github.lzyzsd.circleprogress.DonutProgress
             android:id="@+id/progress"
@@ -65,7 +77,7 @@
             app:donut_text_size="0dp"
             app:donut_progress="75"
             app:donut_finished_color="@color/accent"
-            app:donut_unfinished_color="@color/primary_dark"
+            app:donut_unfinished_color="@color/divider"
             app:donut_finished_stroke_width="5dp"
             app:donut_unfinished_stroke_width="5dp"
             app:layout_constraintDimensionRatio="1:1"
@@ -80,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:src="@drawable/ic_pause"
-            android:backgroundTint="@color/primary_dark"
+            android:backgroundTint="@color/primary_light"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
