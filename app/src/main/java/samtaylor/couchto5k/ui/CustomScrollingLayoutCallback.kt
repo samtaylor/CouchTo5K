@@ -1,4 +1,4 @@
-package samtaylor.couchto5k
+package samtaylor.couchto5k.ui
 
 import android.support.v7.widget.RecyclerView
 import android.support.wear.widget.WearableLinearLayoutManager

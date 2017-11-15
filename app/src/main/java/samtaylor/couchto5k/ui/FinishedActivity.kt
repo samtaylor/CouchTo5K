@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import kotlinx.android.synthetic.main.activity_finished.*
 import samtaylor.couchto5k.R
+import samtaylor.couchto5k.data.Persistence
 
 class FinishedActivity : WearableActivity() {
 
@@ -19,9 +20,10 @@ class FinishedActivity : WearableActivity() {
 
         val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
         val runNumber = intent.extras[EXTRA_RUN_NUMBER] as Int
-        val aborted = intent.extras[EXTRA_ABORTED] as Boolean
 
         runTitle.text = getString(R.string.run_title_format, weekNumber + 1, runNumber + 1)
+
+        Persistence(this).setRunCompleted(weekNumber, runNumber)
 
         doneButton.setOnClickListener {
 
@@ -33,6 +35,5 @@ class FinishedActivity : WearableActivity() {
 
         val EXTRA_WEEK_NUMBER = "extra.weeknumber"
         val EXTRA_RUN_NUMBER = "extra.runnumber"
-        val EXTRA_ABORTED = "extra.aborted"
     }
 }

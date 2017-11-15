@@ -107,6 +107,8 @@ class RunActivity : WearableActivity() {
 
         private val handler = Handler()
 
+        private val TIMER_STEP = 100L
+
         init {
 
             if (totalTime == 0) {
@@ -141,7 +143,7 @@ class RunActivity : WearableActivity() {
                         progress.max = currentStepTime
                         progress.progress = currentStepTime
 
-                        handler.postDelayed(this, 1000)
+                        handler.postDelayed(this, TIMER_STEP)
                         formatLabels()
                     }
                 }
@@ -151,7 +153,7 @@ class RunActivity : WearableActivity() {
 
                     progress.progress = currentStepTime
 
-                    handler.postDelayed(this, 1000)
+                    handler.postDelayed(this, TIMER_STEP)
                     formatLabels()
                 }
             }
@@ -169,7 +171,7 @@ class RunActivity : WearableActivity() {
 
             formatLabels()
 
-            handler.postDelayed(runnable, 1000)
+            handler.postDelayed(runnable, TIMER_STEP)
         }
 
         fun stop() {

@@ -1,8 +1,9 @@
-package samtaylor.couchto5k
+package samtaylor.couchto5k.model
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import samtaylor.couchto5k.R
 
 class ListItemAdapter(private val data: Array<ListItem>, private val onClick:(Int) -> Unit) : RecyclerView.Adapter<ListItemViewHolder>() {
 

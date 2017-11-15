@@ -77,7 +77,7 @@
             app:donut_text_size="0dp"
             app:donut_progress="75"
             app:donut_finished_color="@color/accent"
-            app:donut_unfinished_color="@color/divider"
+            app:donut_unfinished_color="@color/primary"
             app:donut_finished_stroke_width="5dp"
             app:donut_unfinished_stroke_width="5dp"
             app:layout_constraintDimensionRatio="1:1"

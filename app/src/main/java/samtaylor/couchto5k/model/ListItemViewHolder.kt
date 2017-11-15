@@ -1,8 +1,9 @@
-package samtaylor.couchto5k
+package samtaylor.couchto5k.model
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import kotlinx.android.synthetic.main.list_item.view.*
+import samtaylor.couchto5k.R
 
 class ListItemViewHolder(view : View, private val onClick: (Int) -> Unit) : RecyclerView.ViewHolder(view) {
 

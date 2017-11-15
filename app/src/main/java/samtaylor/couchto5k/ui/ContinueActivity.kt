@@ -18,12 +18,6 @@ class ContinueActivity : WearableActivity() {
 
         finishButton.setOnClickListener {
 
-            val intent = Intent(this, FinishedActivity::class.java)
-            intent.putExtra(FinishedActivity.EXTRA_WEEK_NUMBER, weekNumber)
-            intent.putExtra(FinishedActivity.EXTRA_RUN_NUMBER, runNumber)
-            intent.putExtra(FinishedActivity.EXTRA_ABORTED, true)
-            startActivity(intent)
-
             finish()
         }
 
