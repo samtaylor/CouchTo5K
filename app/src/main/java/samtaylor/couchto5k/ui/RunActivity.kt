@@ -107,7 +107,7 @@ class RunActivity : WearableActivity() {
 
         private val handler = Handler()
 
-        private val TIMER_STEP = 100L
+        private val TIMER_STEP = 10L
 
         init {
 

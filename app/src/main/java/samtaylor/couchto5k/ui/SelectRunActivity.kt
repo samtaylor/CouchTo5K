@@ -20,18 +20,30 @@ class SelectRunActivity : WearableActivity() {
 
         navigationDrawer.controller.peekDrawer()
         navigationDrawer.setAdapter(NavigationDrawerAdapter(getString(R.string.action_reset_week), getDrawable(R.drawable.ic_delete)))
+        navigationDrawer.addOnItemSelectedListener {
+
+            val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
+            Persistence(this).clearWeek(weekNumber)
+
+            setAdapter()
+        }
     }
 
     override fun onResume() {
 
         super.onResume()
 
+        recyclerView.layoutManager = WearableLinearLayoutManager(this, CustomScrollingLayoutCallback())
+        recyclerView.isEdgeItemsCenteringEnabled = resources.configuration.isScreenRound
+
+        setAdapter()
+    }
+
+    private fun setAdapter() {
+
         val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
         val persistence = Persistence(this)
         val data = Array(DataProvider(this).data[weekNumber].runs.size) { ListItem(getString(R.string.run_format, it + 1), persistence.runCompleted(weekNumber, it)) }
-
-        recyclerView.layoutManager = WearableLinearLayoutManager(this, CustomScrollingLayoutCallback())
-        recyclerView.isEdgeItemsCenteringEnabled = resources.configuration.isScreenRound
         recyclerView.adapter = ListItemAdapter(data) {
 
             val intent = Intent(this, RunDetailsActivity::class.java)

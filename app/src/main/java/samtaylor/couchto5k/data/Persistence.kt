@@ -23,8 +23,24 @@ class Persistence(context: Context) {
 
     fun runCompleted(week: Int, run: Int) = sharedPreferences.getBoolean("week_${week}_run_$run", false)
 
-    fun setRunCompleted(week: Int, run: Int) {
+    fun setRunCompleted(week: Int, run: Int, value: Boolean = true) {
 
-        sharedPreferences.edit().putBoolean("week_${week}_run_$run", true).apply()
+        sharedPreferences.edit().putBoolean("week_${week}_run_$run", value).apply()
+    }
+
+    fun clearWeek(week: Int) {
+
+        (0 .. dataProvider.data[week].runs.size).forEach {
+
+            setRunCompleted(week, it, false)
+        }
+    }
+
+    fun clearAll() {
+
+        (0 .. dataProvider.data.size).forEach { week ->
+
+            clearWeek(week)
+        }
     }
 }
