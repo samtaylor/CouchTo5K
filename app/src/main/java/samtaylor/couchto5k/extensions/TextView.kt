@@ -1,4 +1,4 @@
-package samtaylor.couchto5k
+package samtaylor.couchto5k.extensions
 
 import android.widget.TextView
 

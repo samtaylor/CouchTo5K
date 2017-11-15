@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_run.*
 import samtaylor.couchto5k.R
 import samtaylor.couchto5k.data.DataProvider
 import samtaylor.couchto5k.model.Step
-import samtaylor.couchto5k.setTime
+import samtaylor.couchto5k.extensions.setTime
 
 class RunActivity : WearableActivity() {
 

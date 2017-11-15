@@ -6,9 +6,11 @@ import android.support.wear.widget.WearableLinearLayoutManager
 import android.support.wearable.activity.WearableActivity
 import kotlinx.android.synthetic.main.activity_list.*
 import samtaylor.couchto5k.CustomScrollingLayoutCallback
-import samtaylor.couchto5k.DataAdapter
+import samtaylor.couchto5k.ListItem
+import samtaylor.couchto5k.ListItemAdapter
 import samtaylor.couchto5k.R
 import samtaylor.couchto5k.data.DataProvider
+import samtaylor.couchto5k.data.Persistence
 
 class SelectWeekActivity : WearableActivity() {
 
@@ -17,11 +19,12 @@ class SelectWeekActivity : WearableActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        val data = Array(DataProvider(this).data.size) { getString(R.string.week_format, it + 1) }
+        val persistence = Persistence(this)
+        val data = Array(DataProvider(this).data.size) { ListItem(getString(R.string.week_format, it + 1), persistence.weekCompleted(it)) }
 
         recyclerView.layoutManager = WearableLinearLayoutManager(this, CustomScrollingLayoutCallback())
         recyclerView.isEdgeItemsCenteringEnabled = resources.configuration.isScreenRound
-        recyclerView.adapter = DataAdapter(data) {
+        recyclerView.adapter = ListItemAdapter(data) {
 
             val intent = Intent(this, SelectRunActivity::class.java)
             intent.putExtra(SelectRunActivity.EXTRA_WEEK_NUMBER, it)
