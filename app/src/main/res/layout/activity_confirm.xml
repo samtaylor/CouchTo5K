@@ -2,6 +2,7 @@
 <android.support.wear.widget.BoxInsetLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
@@ -13,39 +14,40 @@
         app:boxedEdges="all">
 
         <TextView
-            android:id="@+id/continueText"
+            android:id="@+id/confirmTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/continue_label"
+            tools:text="Are you sure?"
             android:textColor="@color/primary_text"
             android:textStyle="bold"
             android:textSize="24sp"
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/confirmDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textColor="@color/secondary_text"
-            android:text="@string/finish_warning"
-            app:layout_constraintTop_toBottomOf="@id/continueText"/>
+            tools:text="Doing the thing you're about to do may do things you don't want to do."
+            app:layout_constraintTop_toBottomOf="@id/confirmTitle"/>
 
         <ImageButton
-            android:id="@+id/continueButton"
+            android:id="@+id/positiveAction"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/continue_circle"
-            android:src="@drawable/ic_run"
+            android:src="@drawable/ic_check"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <ImageView
-            android:id="@+id/finishButton"
+            android:id="@+id/negativeAction"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/finish_circle"
             android:padding="20dp"
-            android:src="@drawable/ic_flag"
+            android:src="@drawable/ic_clear"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

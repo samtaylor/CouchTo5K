@@ -10,7 +10,7 @@ class Persistence(context: Context) {
 
     fun weekCompleted(week: Int) : Boolean {
 
-        (0 .. dataProvider.data[week].runs.size).forEach {
+        (0 until dataProvider.data[week].runs.size).forEach {
 
             if (!runCompleted(week, it)) {
 
@@ -30,7 +30,7 @@ class Persistence(context: Context) {
 
     fun clearWeek(week: Int) {
 
-        (0 .. dataProvider.data[week].runs.size).forEach {
+        (0 until dataProvider.data[week].runs.size).forEach {
 
             setRunCompleted(week, it, false)
         }
@@ -38,7 +38,7 @@ class Persistence(context: Context) {
 
     fun clearAll() {
 
-        (0 .. dataProvider.data.size).forEach { week ->
+        (0 until dataProvider.data.size).forEach { week ->
 
             clearWeek(week)
         }

@@ -13,6 +13,8 @@ import samtaylor.couchto5k.model.ListItemAdapter
 
 class SelectRunActivity : WearableActivity() {
 
+    private val REQUEST_CODE_RESET = 3001
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -21,6 +23,17 @@ class SelectRunActivity : WearableActivity() {
         navigationDrawer.controller.peekDrawer()
         navigationDrawer.setAdapter(NavigationDrawerAdapter(getString(R.string.action_reset_week), getDrawable(R.drawable.ic_delete)))
         navigationDrawer.addOnItemSelectedListener {
+
+            val intent = Intent(this, ConfirmActivity::class.java)
+            intent.putExtra(ConfirmActivity.EXTRA_TITLE, "Are You Sure?")
+            intent.putExtra(ConfirmActivity.EXTRA_DESCRIPTION, "This will delete all of your activity for this week.")
+            startActivityForResult(intent, REQUEST_CODE_RESET)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        if (requestCode == REQUEST_CODE_RESET && resultCode == ConfirmActivity.RESULT_POSITIVE) {
 
             val weekNumber = intent.extras[EXTRA_WEEK_NUMBER] as Int
             Persistence(this).clearWeek(weekNumber)
